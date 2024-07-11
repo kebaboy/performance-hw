@@ -47,4 +47,5 @@ Desktop.ini
 .env.development.local
 .env.production.local
 
+dist/
 

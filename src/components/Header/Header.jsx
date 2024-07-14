@@ -1,15 +1,15 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 function Header() {
     let [expanded, setExpanded] = useState(false);
     let [toggled, setToggled] = useState(false);
 
-    const onClick = () => {
+    const onClick = useCallback(() => {
         if (!toggled) {
             setToggled(true);
         }
 
         setExpanded(!expanded);
-    };
+    }, []);
 
     return (
         <header className='header'>
